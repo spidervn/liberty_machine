@@ -8,8 +8,8 @@ class ISM
 {
 public:
     virtual ~ISM() {}
-    virtual int step(int msg) = 0;
-    virtual int nextValues(int input, int currentState, int nextState) = 0;
+    virtual int step(int msg, int &nOutput, int &nNext_State) = 0;
+    virtual int next_Values(int input, int nCurrentState, int& nOutput, int& nNext_State) = 0;
 };
 
 #endif

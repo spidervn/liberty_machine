@@ -10,8 +10,8 @@ class CSM : public ISM
 {
 public:
     virtual ~CSM();
-    int step(int msg);
-    int nextValues(int input, int currentState, int nextState);
+    int step(int msg, int &nOutput, int &nNext_State);
+    int next_Values(int input, int nCurrentState, int& nOutput, int& nNext_State);
 };
 
 #endif

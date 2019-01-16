@@ -7,8 +7,10 @@
 class CBiComposeSM : public ISM
 {
 public:
-    virtual ~CBiComposeSM() {}
-    
+    CBiComposeSM(ISM* pSm01, ISM* pSm02);
+    virtual ~CBiComposeSM();
+    int next();
+    int next_Values(int input, int currentState, int nextState);
 };
 
 #endif
