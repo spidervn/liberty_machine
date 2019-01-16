@@ -8,10 +8,13 @@ using namespace std;
 
 class CSM : public ISM
 {
+private:
+    int _nState;
 public:
+    CSM(int initState);
     virtual ~CSM();
-    int step(int msg, int &nOutput, int &nNext_State);
-    int next_Values(int input, int nCurrentState, int& nOutput, int& nNext_State);
+    int step(int msg);
+    virtual int next_Values(int input, int nCurrentState, int& nOutput, int& nNext_State) = 0;
 };
 
 #endif

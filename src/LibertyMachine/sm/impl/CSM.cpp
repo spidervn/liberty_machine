@@ -1,14 +1,19 @@
 #include "CSM.h"
 
-CSM::~CSM()
-{}
-
-int CSM::step(int msg, int &nOutput, int &nNext_State)
+CSM::CSM(int initState)
 {
-    return 0;
+    _nState = initState;
 }
 
-int CSM::next_Values(int input, int nCurrentState, int& nOutput, int& nNext_State)
+CSM::~CSM()
 {
-    return 0;
+}
+
+int CSM::step(int msg)
+{
+    int input;
+    int output;
+    next_Values(msg, _nState, msg, output);
+    
+    return output;
 }
