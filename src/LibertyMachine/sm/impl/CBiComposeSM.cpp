@@ -34,6 +34,7 @@ int CBiComposeSM::step(int msg)
         }
         // n_Ret = _pState->myState()        
     }
+    
     return n_Ret;
 }
 
