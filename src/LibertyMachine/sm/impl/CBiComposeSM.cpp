@@ -26,7 +26,13 @@ int CBiComposeSM::step(int msg)
         {
             // 
             int nInterconnectionMsg;
-            ISM* pSwitchTo = (_pSM1 + _pSM2) - _pState;
+            ISM* pSwitchTo = (_pSM1 == _pState) ? _pSM2 : _pSM1; //  (_pSM1 + _pSM2) - _pState;
+
+            if (_pState == pSwitchTo)
+            {
+                // 
+                
+            }
 
             // Translate the Message into pSM02
             nInterconnectionMsg = _InterTranslation(_pState, pSwitchTo, msg, oldState, nNext_State);
