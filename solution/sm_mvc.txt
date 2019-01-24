@@ -1,0 +1,75 @@
+
+P1. StateMachine và MVC:
+P2. Composite StateMachine ?
+P3. Áp dụng cho jcm.
+
+A1. Cho một stateMachine sm.
+    Và 1 mô hình MVC mvc
+
+    Cách hoạt động của sm và mvc như sau:
+        sm là một component được associate trong mvc.Model.
+        sm đóng vai trò là trạng thái.
+
+        Các sự kiện từ MVC, được controller gửi tới sm thông qua hàm queueEvent.
+        mvc.controller kiểm tra giá trị của sm, nếu thay đổi giá trị nào quan trọng, sẽ update vào view.
+
+A2. Các hình thức ghép nối: 
+        - Nối tiếp đôi
+        - Nối tiếp ba
+        - Song song đôi
+        - Song song ba
+        - Switcher đôi
+        - Switcher ba
+        - Switcher[N]
+   
+A3. Các machine nguyên tử:
+    Application
+    Editor
+        RectangleManipulator
+        CircleManipulator
+        EllipseManipulator
+        TriangleManipulator
+        PolygonManipulator
+        GridManipulator
+    Effects:
+        NoiseEffect
+
+    Hoạt động chính của MS-MVC:
+        WindowsLoop --(Sự kiện)--> Windows/Dialog
+            DeviceContext
+            Controller/Model
+        File tài nguyên (resource):
+            Define Model cho MFC.
+
+    Hoạt động chính:        
+            Theo windows MFC
+            Windows hoạt động theo WindowsAPI.
+            File tài nguyên
+        Theo MFC:
+            Window:
+                Hiển thị.
+                Tương tác người dùng.
+                Thay đổi kích thước.
+                Move.
+            Các công việc của MFC Window:
+                Paint lên Device context (dc) của Window.
+                Sắp xếp/thiết kế thành kịch bản của Editor.
+                Nhận tương tác từ Chuột/bàn phím.
+            Các công việc của Editor:
+                Khởi tạo rỗng.
+                Chọn bút:
+                    Đưa bút vẽ tạo hình (Tròn/Vuông/Chữ nhật/Ellipse)
+                    Đưa bút dán.
+                    Lấy lại bút tạo hình.
+                    Chuyển đổi bút tạo hình.
+                Thao tác bút vẽ: 
+                    Vẽ hình bằng bút.
+                    Dứt bút khi đang vẽ dở một hình.
+                    Đổi bút khi đang thao tác.
+                    Hoàn thiện tạo hình.
+                Thao tác bút dán:
+                    Dán hình khối.
+                    Rê hình khối đã dán.
+                    Hủy hình khối đã dán.
+                
+
