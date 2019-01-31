@@ -1,0 +1,12 @@
+
+Architectural Pattern: 
+    A general, reusable solution to a commonly occuring problem in software architecture within a given context.
+    Architectural pattern are similar to software design patterns but have a broader scope.
+    
+List: 
+    Data Integration/ SOA 
+    Data architecture
+    Analytics & business intelligence
+    Master data management
+    Data Modeling
+    AI
