@@ -16,14 +16,13 @@ public:
     int addSwitcher(ISM* pSM, bool isActive = true);
 
     virtual int step(int msg);
+    virtual int _navigation() = 0;
     virtual int _isSwitchable(ISM* pActiveSM, int currentState, int incomingMsg) = 0;
     virtual int _SMToSwitch(ISM* pActiveSM, int currentState, int incomingMsg) = 0;
-    // virtual int _beforeSwitchProcess(ISM* pActiveSM, int currentState, int incomingMsg);
-    // virtual int _beforeSwitchProcess(ISM* pActiveSM, int currentState, int incomingMsg);
 
 private:
     std::vector<ISM*> _vSwitch;
     int _active_Index;
 };
 
-#endif
+#endif // LIBERTYMACHINE_SM_IMPL_CSWITCHERSM_H_

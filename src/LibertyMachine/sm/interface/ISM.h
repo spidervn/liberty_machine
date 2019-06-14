@@ -4,6 +4,7 @@
 #include <stdio.h>
 using namespace std;
 
+template<typename T>
 class ISM
 {
 public:

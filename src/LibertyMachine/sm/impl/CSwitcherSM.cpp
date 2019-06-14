@@ -24,3 +24,14 @@ int CSwitcherSM::step(int msg)
     
     return 0;
 }
+
+int  CSwitcherSM::_isSwitchable(ISM* pActiveSM, int currentState, int incomingMsg)
+{
+    return 0;
+}
+
+int CSwitcherSM::_SMToSwitch(ISM* pActiveSM, int currentState, int incomingMsg)
+{
+    return 0;
+}
+
